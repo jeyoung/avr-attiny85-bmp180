@@ -14,7 +14,7 @@ int main(void)
     struct bmp180_measurements measurements = {0};
     while (1) {
 	bmp180_measure(&measurements);
-	sprintf(output, "Temperature: %ld\tPressure: %ld\n", measurements.temperature, measurements.pressure);
+	sprintf(output, u8"Temperature: %ld (0.1 °C)\tPressure: %ld (Pa)\n", measurements.temperature, measurements.pressure);
 	usi_send_data(output);
 	delay_ms(2000);
     }

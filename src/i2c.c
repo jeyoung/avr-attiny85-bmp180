@@ -203,6 +203,9 @@ void i2c_read(struct i2c_read_data *data, enum i2c_state *state)
 	    data->state = R_NONE;
 	    *state = data->success_state;
 	    break;
+	    
+	default:
+	    break;
     }
 }
 

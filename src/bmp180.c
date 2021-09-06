@@ -139,6 +139,9 @@ void bmp180_measure(struct bmp180_measurements *measurements)
 			measurements->up = measurements->up >> (8 - OSS);
 			measurements_state = M_STOP;
 			break;
+
+		    default:
+			break;
 		}
 
 		if (measurements_state != M_STOP) {

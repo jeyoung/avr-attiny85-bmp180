@@ -15,11 +15,13 @@
 #define CONTROL USICR
 #define DATA    USIDR
 
+#if 0
 static uint8_t reverse(char b);
 
 static void usi_init(void);
 
 static void usi_send_byte(char byte);
+#endif
 
 void usi_send_data(const char *str);
 
